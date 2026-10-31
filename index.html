@@ -1,0 +1,257 @@
+<title>Srushti Patil</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Public+Sans:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: an audit workpaper — left margin carries reference codes (like control IDs), right column carries the evidence. */
+:root{
+  --paper:#F3F6F7; --sheet:#FFFFFF; --ink:#14202B; --muted:#55636F; --rule:#D5DEE3;
+  --accent:#1D6A58; --accent-ink:#FFFFFF; --mark:#E3EFEA;
+  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body:"Public Sans", "Segoe UI", system-ui, sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#0E1418; --sheet:#151D23; --ink:#E6ECEF; --muted:#9AA8B2; --rule:#2A3640;
+  --accent:#5CC2A6; --accent-ink:#06231C; --mark:#18302A; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0E1418; --sheet:#151D23; --ink:#E6ECEF; --muted:#9AA8B2; --rule:#2A3640;
+  --accent:#5CC2A6; --accent-ink:#06231C; --mark:#18302A; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top, 0px);z-index:10;background:var(--paper)}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:980px;margin:0 auto}
+
+nav{position:sticky;top:env(safe-area-inset-top, 0px);z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:12px;flex-wrap:wrap}
+.brand{font-family:var(--mono);font-size:13px;color:var(--muted);text-decoration:none}
+.brand b{color:var(--ink)}
+nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav ul a{display:block;padding:6px 10px;border-radius:6px;color:var(--ink);text-decoration:none;font-size:14px}
+nav ul a:hover{background:var(--mark)}
+
+header.hero{padding-block:56px 40px}
+.hero-grid{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:start}
+.avatar{width:112px;height:112px;border-radius:50%;background:var(--mark);border:2px solid var(--accent);
+  display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:40px;color:var(--accent);overflow:hidden}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.kicker{font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(36px,6vw,58px);line-height:1.05;margin:0 0 14px;text-wrap:balance}
+.lede{font-size:clamp(17px,2.2vw,20px);max-width:62ch;margin:0 0 22px;color:var(--ink)}
+.lede em{font-style:normal;background:linear-gradient(transparent 62%, var(--mark) 0)}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:8px;font-weight:600;font-size:15px;
+  text-decoration:none;border:1.5px solid var(--accent);color:var(--accent);background:transparent;cursor:pointer;font-family:var(--body)}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn:hover{filter:brightness(1.08)}
+.btn svg{width:16px;height:16px}
+
+section{padding-block:40px;border-top:1px solid var(--rule)}
+.row{display:grid;grid-template-columns:180px 1fr;gap:28px}
+.row > *{min-width:0}
+.ref{font-family:var(--mono);font-size:12.5px;color:var(--muted)}
+.ref b{display:block;color:var(--ink);font-family:var(--display);font-size:22px;font-weight:700;margin-top:4px;line-height:1.2}
+h3{font-family:var(--display);font-size:21px;margin:0 0 6px;line-height:1.25;text-wrap:balance}
+p{margin:0 0 12px;max-width:68ch}
+
+.qs{display:grid;gap:14px;list-style:none;margin:0;padding:0}
+.qs li{display:grid;grid-template-columns:52px 1fr;gap:12px;align-items:start}
+.qs .code{font-family:var(--mono);font-size:12px;color:var(--accent);background:var(--mark);border-radius:4px;padding:3px 6px;text-align:center}
+.qs strong{display:block}
+.qs span.d{color:var(--muted);font-size:15px}
+
+.work{display:grid;gap:22px}
+.item{background:var(--sheet);border:1px solid var(--rule);border-radius:10px;padding:22px}
+.item .meta{font-family:var(--mono);font-size:12.5px;color:var(--muted);margin-bottom:6px}
+.item ul{margin:10px 0 14px;padding-left:20px}
+.item li{margin-bottom:6px}
+.figs{display:flex;flex-wrap:wrap;gap:8px 18px;margin:4px 0 12px;font-family:var(--mono);font-size:13px;font-variant-numeric:tabular-nums}
+.figs b{color:var(--accent)}
+.links{display:flex;flex-wrap:wrap;gap:8px}
+.links a{font-size:14px;font-weight:600;text-decoration:none;padding:6px 12px;border:1px solid var(--rule);border-radius:6px;color:var(--ink)}
+.links a:hover{border-color:var(--accent);color:var(--accent)}
+.links a::after{content:" ↗";color:var(--muted)}
+
+.tags{display:flex;flex-wrap:wrap;gap:6px;list-style:none;padding:0;margin:0 0 16px}
+.tags li{font-size:13.5px;padding:4px 10px;border-radius:999px;border:1px solid var(--rule);background:var(--sheet)}
+.k{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0 0 8px}
+
+.creds{display:grid;gap:12px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.cred{border-left:3px solid var(--accent);padding:4px 0 4px 14px}
+.cred strong{display:block}
+.cred span{color:var(--muted);font-size:14.5px}
+
+.contact{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.email{font-family:var(--mono);font-size:15px;padding:9px 12px;background:var(--sheet);border:1px solid var(--rule);border-radius:8px;user-select:all;word-break:break-all}
+.toast{font-size:14px;color:var(--accent);min-height:1.4em;margin-top:8px}
+footer{padding-block:28px 40px;border-top:1px solid var(--rule);font-size:13.5px;color:var(--muted)}
+
+@media (max-width:720px){
+  .row{grid-template-columns:1fr;gap:12px}
+  .hero-grid{grid-template-columns:1fr;gap:18px}
+  .avatar{width:88px;height:88px;font-size:32px}
+  .creds{grid-template-columns:1fr}
+  header.hero{padding-block:32px 28px}
+}
+</style>
+
+<nav aria-label="Sections">
+  <div class="wrap">
+    <a class="brand" href="#top"><b>Srushti Patil</b> · AI governance &amp; security</a>
+    <ul>
+      <li><a href="#interests">Research interests</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#credentials">Credentials</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap" id="top">
+  <header class="hero">
+    <div class="hero-grid">
+      <div class="avatar"><img src="data:image/jpeg;base64,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" alt="Portrait of Srushti Patil" width="112" height="112"></div>
+      <div>
+        <p class="kicker">B.Tech Cyber Security, 2026 · Mumbai, India</p>
+        <h1>Srushti Patil</h1>
+        <p class="lede">I come to AI safety from audit and security work. I test whether controls exist and actually work, and I want to apply that habit to <em>external assessment of frontier AI developers</em>: checking public commitments, safeguards and evaluations against the evidence behind them.</p>
+        <div class="btns">
+          <a class="btn primary" href="#work">See my work</a>
+          <a class="btn" href="https://github.com/srushtipatil-1" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+            GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/srushtipatilcloud/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+            LinkedIn</a>
+          <a class="btn" href="#contact">Email me</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="interests" aria-labelledby="h-int">
+    <div class="row">
+      <div class="ref">§1 · Research interests<b id="h-int">Questions I want to work on</b></div>
+      <div>
+        <p>I am early in AI safety research. These are the questions where I think my audit and security background gives me a useful starting point.</p>
+        <ul class="qs">
+          <li><span class="code">Q1</span><div><strong>External assessment of AI companies</strong><span class="d">How can outsiders check whether frontier AI developers follow their own safety commitments and the EU General-Purpose AI Code of Practice, using only public documents and models?</span></div></li>
+          <li><span class="code">Q2</span><div><strong>Evaluations as regulatory evidence</strong><span class="d">When should a regulator trust an AI evaluation result? Audit practice already has rules for evidence sufficiency, sampling and re-performance that may transfer.</span></div></li>
+          <li><span class="code">Q3</span><div><strong>Secure, automated oversight</strong><span class="d">How can AI use in sensitive settings be audited automatically while keeping confidential details restricted to authorised reviewers?</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" aria-labelledby="h-work">
+    <div class="row">
+      <div class="ref">§2 · Work<b id="h-work">Projects and evidence</b></div>
+      <div class="work">
+
+        <article class="item">
+          <div class="meta">Independent project · Python, Streamlit, GitHub Actions</div>
+          <h3>GovernIQ: GRC and AI governance platform</h3>
+          <div class="figs"><span><b>30</b> risks</span><span><b>33</b> controls</span><span><b>85</b> requirements</span><span><b>7</b> frameworks</span><span><b>238</b> automated tests</span></div>
+          <ul>
+            <li>Mapped controls to ISO 27001, NIST CSF 2.0, the DPDP Act and ISO/IEC 42001; generated an audit-ready Risk &amp; Control Matrix.</li>
+            <li>Built an AI system inventory with EU AI Act-style risk tiering and NIST AI RMF-based assessments, with lifecycle gates before production.</li>
+            <li>Red-teamed a simulated LLM chatbot with 16 prompts mapped to the OWASP Top 10 for LLM Applications; layered guardrails raised its pass rate from 2/16 to 16/16.</li>
+            <li>Validated an AI credit model on 2,000 hold-out cases for accuracy, fairness (0.85 approval ratio: meets the four-fifths rule but fails the 0.90 appetite) and drift.</li>
+          </ul>
+          <div class="links">
+            <a href="https://governiq-grc-srushti.streamlit.app" target="_blank" rel="noopener">Live demo</a>
+            <a href="https://github.com/srushtipatil-1/governiq-grc-ai-governance" target="_blank" rel="noopener">Code</a>
+            <a href="https://lnkd.in/p/dwQ4YZpR" target="_blank" rel="noopener">Write-up</a>
+          </div>
+        </article>
+
+        <article class="item">
+          <div class="meta">Independent audit · Python, GitHub REST API, Excel</div>
+          <h3>ITGC change-management audit of two open-source security tools</h3>
+          <div class="figs"><span><b>867</b> changes tested</span><span><b>100%</b> population</span><span><b>315</b> exceptions (36.3%)</span><span><b>4</b> rated observations</span></div>
+          <ul>
+            <li>Audited Prowler and Trivy against SOC 2 CC8.1 and ISO 27001:2022 A.8.32/A.5.3, testing 5 attributes per change.</li>
+            <li>Ran completeness checks (counts, duplicates, date range, SHA-256 hashes) and confirmed results by manual re-performance.</li>
+            <li>Investigated a 76% raw exception rate and excluded 306 non-blocking check failures to reach a defensible result.</li>
+            <li>Wrote a full audit package: plan, scoping memo, decisions log, workpaper and management letter.</li>
+          </ul>
+          <div class="links">
+            <a href="https://github.com/srushtipatil-1/itgc-change-management-audit-testing" target="_blank" rel="noopener">Code &amp; workpapers</a>
+            <a href="https://lnkd.in/p/dhcWq3QQ" target="_blank" rel="noopener">Write-up</a>
+          </div>
+        </article>
+
+        <article class="item">
+          <div class="meta">Cloud security project · Azure, Entra ID, Terraform</div>
+          <h3>Azure least-privilege identity and access governance</h3>
+          <div class="figs"><span><b>10</b> controls mapped</span><span><b>&lt;2 min</b> detect, remove, re-verify</span></div>
+          <ul>
+            <li>Defined a least-privilege baseline with Reader roles scoped to one resource group; a secretless managed-identity test confirmed read access and denied write.</li>
+            <li>Seeded over-privileged access, which a scripted role-assignment audit detected, removed and re-verified, traced in the Activity Log.</li>
+          </ul>
+          <div class="links">
+            <a href="https://github.com/srushtipatil-1/azure-cross-account-iam-security" target="_blank" rel="noopener">Code</a>
+            <a href="https://lnkd.in/p/dEYUrRtb" target="_blank" rel="noopener">Write-up</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="credentials" aria-labelledby="h-cred">
+    <div class="row">
+      <div class="ref">§3 · Credentials<b id="h-cred">Education, certifications, frameworks</b></div>
+      <div>
+        <div class="creds">
+          <div class="cred"><strong>B.Tech in Cyber Security</strong><span>Shah &amp; Anchor Kutchhi Engineering College, Mumbai · June 2026</span></div>
+          <div class="cred"><strong><a href="https://drive.google.com/file/d/1hKKD7evnKo6MPpf6BHO_KECjWssslW1l/view?usp=sharing" target="_blank" rel="noopener">Azure Security Engineer Associate (AZ-500)</a></strong><span>Microsoft · April 2026</span></div>
+          <div class="cred"><strong><a href="https://drive.google.com/file/d/19STan3ZfFvWbyx4zuHzYmM3e1B43_ub6/view?usp=sharing" target="_blank" rel="noopener">Security Operations Analyst Associate (SC-200)</a></strong><span>Microsoft · April 2026</span></div>
+        </div>
+        <p class="k" style="margin-top:24px">AI governance frameworks I have applied</p>
+        <ul class="tags"><li>EU AI Act</li><li>NIST AI RMF</li><li>ISO/IEC 42001</li><li>OWASP Top 10 for LLM Applications</li><li>Model cards</li><li>Human oversight</li></ul>
+        <p class="k">Security and audit</p>
+        <ul class="tags"><li>ISO/IEC 27001:2022</li><li>SOC 2</li><li>NIST CSF 2.0</li><li>DPDP Act 2023</li><li>GDPR</li><li>Control testing</li><li>Audit sampling</li><li>Threat modelling</li></ul>
+        <p class="k">Tools</p>
+        <ul class="tags"><li>Python</li><li>GitHub REST API</li><li>Azure</li><li>Terraform</li><li>Git</li><li>Excel</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" aria-labelledby="h-con">
+    <div class="row">
+      <div class="ref">§4 · Contact<b id="h-con">Get in touch</b></div>
+      <div>
+        <p>I am applying to the Pivotal AI Safety Fellowship (Q1 2027) and happy to talk about any of the work above.</p>
+        <div class="contact">
+          <span class="email" id="email">srushtipatil.cloud@gmail.com</span>
+          <button class="btn primary" id="copy" type="button">Copy email</button>
+          <a class="btn" href="mailto:srushtipatil.cloud@gmail.com">Open in mail app</a>
+        </div>
+        <div class="toast" id="toast" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>Srushti Patil · Mumbai, India · <a href="https://github.com/srushtipatil-1" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/srushtipatilcloud/" target="_blank" rel="noopener">LinkedIn</a></footer>
+</main>
+
+<script>
+(function(){
+  var btn=document.getElementById('copy'), toast=document.getElementById('toast'), el=document.getElementById('email');
+  function selectText(){var r=document.createRange();r.selectNodeContents(el);var s=window.getSelection();s.removeAllRanges();s.addRange(r);}
+  btn.addEventListener('click',function(){
+    var t=el.textContent.trim();
+    try{
+      navigator.clipboard.writeText(t).then(function(){toast.textContent='Email copied.';},function(){selectText();toast.textContent='Email selected. Press Ctrl+C to copy.';});
+    }catch(e){selectText();toast.textContent='Email selected. Press Ctrl+C to copy.';}
+  });
+})();
+</script>
